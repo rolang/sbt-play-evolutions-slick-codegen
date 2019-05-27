@@ -20,7 +20,7 @@ lazy val root = (project in file("."))
     scriptedBufferLog := false,
 
     // publish settings
-    licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
+    licenses += ("MIT", url("https://github.com/rolang/sbt-play-evolutions-slick-codegen/blob/master/LICENCE")),
     publishMavenStyle := false,
     bintrayRepository := (if (isSnapshot.value) "sbt-plugins-snapshots" else "sbt-plugins"),
     bintrayOrganization := None,
