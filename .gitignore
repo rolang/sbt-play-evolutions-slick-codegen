@@ -7,4 +7,5 @@ target
 project/project
 .settings
 .metals
+.bloop
 /RUNNING_PID
