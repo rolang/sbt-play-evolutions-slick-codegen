@@ -4,7 +4,7 @@ CREATE TABLE test (
   id SERIAL PRIMARY KEY,
   name text,
   number int,
-  document jsonb,
+  document json,
   list text[]
 );
 

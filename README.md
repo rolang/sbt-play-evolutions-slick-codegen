@@ -1,5 +1,7 @@
 # sbt-play-evolutions-slick-codegen
 
+[![Build Status](https://travis-ci.org/rolang/sbt-play-evolutions-slick-codegen.svg?branch=master)](https://travis-ci.org/rolang/sbt-play-evolutions-slick-codegen)
+
 Slick code generator sbt plugin for play evolutions.
 
 Add plugin to `plugins.sbt` in your project.

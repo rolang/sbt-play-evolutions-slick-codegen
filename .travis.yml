@@ -2,7 +2,12 @@ language: scala
 scala:
   - 2.12.8
 
-addons:
-  postgresql: "10"
+services:
+  - postgresql
 
 script: sbt scripted
+
+cache:
+  directories:
+    - $HOME/.ivy2/cache/
+    - $HOME/.sbt/boot/
