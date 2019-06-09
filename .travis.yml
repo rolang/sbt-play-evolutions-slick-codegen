@@ -2,7 +2,7 @@ language: scala
 scala:
   - 2.12.8
 
-services:
-  - postgresql
+addons:
+  postgresql: "10"
 
 script: sbt scripted
