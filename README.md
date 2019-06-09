@@ -7,6 +7,7 @@ Slick code generator sbt plugin for play evolutions.
 Add plugin to `plugins.sbt` in your project.
 
 ```
+resolvers += Resolver.bintrayIvyRepo("rolang", "sbt-plugins")
 addSbtPlugin("codes.rolang.sbt" % "play-evolutions-slick-codegen" % "0.1.0")
 ```
 
