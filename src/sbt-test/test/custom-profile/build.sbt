@@ -5,7 +5,7 @@ lazy val testRoot = (project in file("."))
     version := "0.1",
     organization := "test",
     scalaVersion := "2.12.8",
-    slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres&password=passwd",
+    slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres",
     slickCodeGenProfile := CustomPostgresProfile,
     slickCodeGenProfileSrc := Some("project/CustomPostgresProfile.scala")
   )

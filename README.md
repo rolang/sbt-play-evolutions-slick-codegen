@@ -15,13 +15,13 @@ lazy val myProject = (project in file(".")).enablePlugins(PlayEvolutionsSlickCod
 
 ```bash
 # ensure the database service is running (if you don't use an in-memory database), e.g.
-docker run -e POSTGRES_PASSWORD=passwd -p 5432:5432 -d postgres
+docker run -p 5432:5432 -d postgres
 ```
 
 Settings:
 ```scala
 // required
-slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres&password=passwd",
+slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres",
 
 // optional := default value
 slickCodeGenJdbcDriver      := "org.postgresql.Driver",
