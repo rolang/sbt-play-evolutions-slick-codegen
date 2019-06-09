@@ -5,7 +5,12 @@ Slick code generator sbt plugin for play evolutions.
 Add plugin to `plugins.sbt` in your project.
 
 ```
-addSbtPlugin("codes.rolang.sbt" % "play-evolutions-slick-codegen" % "0.0.1")
+addSbtPlugin("codes.rolang.sbt" % "play-evolutions-slick-codegen" % "0.1.0")
+```
+
+Enable in your project
+```scala
+lazy val myProject = (project in file(".")).enablePlugins(PlayEvolutionsSlickCodeGenPlugin)
 ```
 
 ```bash

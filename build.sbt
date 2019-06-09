@@ -5,7 +5,7 @@ lazy val root = (project in file("."))
   .enablePlugins(SbtPlugin)
   .settings(
     name := "play-evolutions-slick-codegen",
-    version := "0.0.1",
+    version := "0.1.0",
     organization := "codes.rolang.sbt",
     scalaVersion := "2.12.8",
     libraryDependencies ++= Seq(
