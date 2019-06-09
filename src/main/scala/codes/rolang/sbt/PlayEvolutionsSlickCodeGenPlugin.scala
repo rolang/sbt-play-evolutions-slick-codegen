@@ -30,6 +30,9 @@ object PlayEvolutionsSlickCodeGenPlugin extends AutoPlugin {
     lazy val slickCodeGenOutputPackage: SettingKey[String] =
       settingKey[String]("Package of generated code")
 
+    lazy val slickCodeGenOutputDir: SettingKey[File] =
+      settingKey[File]("Output directory of generated code")
+
     lazy val slickCodeGenCodeGenerator: SettingKey[Model => SourceCodeGenerator] =
       settingKey[Model => SourceCodeGenerator]("Function that provides the SourceCodeGenerator")
 
@@ -46,6 +49,7 @@ object PlayEvolutionsSlickCodeGenPlugin extends AutoPlugin {
     slickCodeGenDbUrl := "Database url is not set",
     slickCodeGenPlayEvolutions := "default",
     slickCodeGenOutputPackage := "com.example",
+    slickCodeGenOutputDir := (sourceManaged in Compile).value,
     slickCodeGenExcludedTables := Seq("play_evolutions"),
     slickCodeGenCodeGenerator := { m: Model => new SourceCodeGenerator(m) },
 
