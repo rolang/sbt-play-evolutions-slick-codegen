@@ -6,7 +6,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "play-evolutions-slick-codegen",
     version := "0.1.0",
-    organization := "codes.rolang.sbt",
+    organization := "dev.rolang.sbt",
+    homepage := Some(url("https://github.com/rolang/sbt-play-evolutions-slick-codegen")),
     scalaVersion := "2.12.8",
     libraryDependencies ++= Seq(
       "com.typesafe.slick"  %% "slick"                % slickVersion,
@@ -21,8 +22,24 @@ lazy val root = (project in file("."))
 
     // publish settings
     licenses += ("MIT", url("https://github.com/rolang/sbt-play-evolutions-slick-codegen/blob/master/LICENCE")),
-    publishMavenStyle := false,
-    bintrayRepository := (if (isSnapshot.value) "sbt-plugins-snapshots" else "sbt-plugins"),
-    bintrayOrganization := None,
-    bintrayReleaseOnPublish := isSnapshot.value
+    publishMavenStyle := true,
+    scmInfo := Some(
+      ScmInfo(
+        url("https://github.com/rolang/sbt-play-evolutions-slick-codegen"),
+        "scm:git@github.com:rolang/sbt-play-evolutions-slick-codegen.git"
+      )
+    ),
+    developers := List(
+      Developer(
+        id = "rolang",
+        name = "Roman Langolf",
+        email = "rolang@pm.me",
+        url = url("https://rolang.dev")
+      )
+    ),
+    publishTo := {
+      val nexus = "https://oss.sonatype.org/"
+      if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
+      else Some("releases" at nexus + "service/local/staging/deploy/maven2")
+    }
   )

@@ -9,5 +9,7 @@ script: sbt scripted
 
 cache:
   directories:
-    - $HOME/.ivy2/cache/
-    - $HOME/.sbt/boot/
+    - $HOME/.m2
+    - $HOME/.ivy2
+    - $HOME/.cache/coursier
+    - $HOME/.sbt

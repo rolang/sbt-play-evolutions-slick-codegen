@@ -7,8 +7,7 @@ Slick code generator sbt plugin for play evolutions.
 Add plugin to `plugins.sbt` in your project.
 
 ```
-resolvers += Resolver.bintrayIvyRepo("rolang", "sbt-plugins")
-addSbtPlugin("codes.rolang.sbt" % "play-evolutions-slick-codegen" % "0.1.0")
+addSbtPlugin("dev.rolang.sbt" % "play-evolutions-slick-codegen" % "0.1.0")
 ```
 
 Enable in your project
@@ -18,13 +17,13 @@ lazy val myProject = (project in file(".")).enablePlugins(PlayEvolutionsSlickCod
 
 ```bash
 # ensure the database service is running (if you don't use an in-memory database), e.g.
-docker run -p 5432:5432 -d postgres
+docker run -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:11-alpine
 ```
 
 Settings:
 ```scala
 // required
-slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres",
+slickCodeGenDbUrl := "jdbc:postgresql://localhost:5432/postgres?user=postgres&password=postgres",
 
 // optional := default value
 slickCodeGenJdbcDriver      := "org.postgresql.Driver",
