@@ -1,3 +1,5 @@
-> slickCodeGen
+> +slickCodeGen
 $ exists target/scala-2.12/src_managed/main/com/example/Tables.scala
 $ exists target/scala-2.12/src_managed/main/com/example/CustomPostgresProfile.scala
+$ exists target/scala-2.13/src_managed/main/com/example/Tables.scala
+$ exists target/scala-2.13/src_managed/main/com/example/CustomPostgresProfile.scala

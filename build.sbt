@@ -1,5 +1,5 @@
-val slickVersion = "3.3.0"
-val playVersion = "2.7.2"
+val slickVersion = "3.3.3"
+val playVersion = "2.8.7"
 
 lazy val root = (project in file("."))
   .enablePlugins(SbtPlugin)
@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
     version := "0.1.0",
     organization := "dev.rolang.sbt",
     homepage := Some(url("https://github.com/rolang/sbt-play-evolutions-slick-codegen")),
-    scalaVersion := "2.12.8",
+    scalaVersion := "2.12.13",
     libraryDependencies ++= Seq(
       "com.typesafe.slick"  %% "slick"                % slickVersion,
       "com.typesafe.slick"  %% "slick-codegen"        % slickVersion,
